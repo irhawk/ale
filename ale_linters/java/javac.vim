@@ -50,7 +50,7 @@ function! ale_linters#java#javac#GetCommand(buffer, import_paths, meta) abort
     let l:sp_option = ''
 
     " Find the src directory, for files in this project.
-    let l:src_dir = ale#path#FindNearestDirectory(a:buffer, 'src/main/java')
+    let l:src_dir = ale#path#FindNearestDirectory(a:buffer, 'src')
     let l:sp_dirs = []
 
     if !empty(l:src_dir)
